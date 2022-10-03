@@ -10,6 +10,7 @@ const Project = ({ image, title, description, cta }) => {
         <img
           className="project-image"
           src={require(`../assets/images/${image}.png`)}
+          alt={title}
         />
       </div>
       <div className="project-content">

@@ -49,6 +49,14 @@ export const projects = [
   {
     id: 4,
     image: "project4",
+    title: "Saving & Investments",
+    description:
+      "A Finncial Tool that helps you save your money all in one place, vester helps you achieve your financial dreams",
+    url: "https://saving-and-investment.netlify.app/",
+  },
+  {
+    id: 5,
+    image: "project5",
     title: "Furniture E-store",
     description:
       "Furniture E-Store is a portfolio webiste, which gives users the experience of shopping e-commerce",
