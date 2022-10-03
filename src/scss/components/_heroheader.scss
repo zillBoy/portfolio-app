@@ -1,0 +1,231 @@
+// Mixins
+
+// Personal Main Container
+@mixin personal-maincontainer {
+  height: 95vh;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+}
+
+// Personal Info
+@mixin personal-info {
+  &-location {
+    background-color: rgba(0, 0, 0, 0);
+    width: $heroheader-location-mobile-width;
+
+    &--geo {
+      display: none;
+    }
+
+    &--globe {
+      svg {
+        background-color: rgba(0, 0, 0, 0);
+        margin-bottom: -2rem;
+        margin-left: -3rem;
+      }
+    }
+  }
+
+  &-career {
+    padding: 0 $spacing-sm;
+
+    &--arrow {
+      svg {
+        width: $svg-mobile-width;
+        height: $svg-mobile-height;
+        color: $white-color;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--designation {
+      font-size: $font-size-2xl;
+      color: $white-color;
+    }
+  }
+}
+
+// Author Container
+@mixin author-container {
+  & {
+    transform: translateY(55vh);
+
+    &--inner {
+      animation: marquee-mobile 14s linear infinite;
+
+      .name {
+        font-size: calc($font-size-4xl * 3);
+      }
+
+      .spacer {
+        font-size: calc($font-size-4xl * 3);
+      }
+    }
+  }
+}
+
+.hero-header-container {
+  z-index: 1;
+}
+
+.hero-header-image-container {
+  background-color: $black-color;
+  overflow: hidden;
+
+  position: absolute;
+  top: 0%;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero-header-image {
+  opacity: 0.8;
+}
+
+.personal-maincontainer {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-port) {
+    @include personal-maincontainer;
+  }
+
+  @include respond(phone) {
+    @include personal-maincontainer;
+  }
+}
+
+.personal-info-container {
+  position: relative;
+  height: 50vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @include respond(tab-port) {
+    flex-direction: row-reverse;
+  }
+
+  @include respond(phone) {
+    flex-direction: row-reverse;
+  }
+}
+
+.personal-info {
+  &-location {
+    background-color: $dark-grey-color;
+    color: $white-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: $heroheader-location-width;
+    padding: calc($spacing-md);
+
+    border-top-right-radius: $border-radius-md;
+    border-bottom-right-radius: $border-radius-md;
+
+    &--geo {
+      width: 70%;
+    }
+
+    &--globe {
+      svg {
+        background-color: $grey-color;
+        border-radius: $border-radius-half;
+        width: $svg-width;
+        height: $svg-height;
+        padding: $spacing-xs;
+      }
+    }
+  }
+
+  &-career {
+    padding: 0 calc($spacing-sm + $spacing-md);
+
+    &--arrow {
+      svg {
+        width: $svg-width;
+        height: $svg-height;
+        color: $white-color;
+      }
+    }
+
+    &--designation {
+      font-size: $font-size-4xl;
+      color: $white-color;
+    }
+  }
+
+  // Tablet
+  @include respond(tab-port) {
+    @include personal-info;
+  }
+
+  // Phone
+  @include respond(phone) {
+    @include personal-info;
+  }
+
+  @include respond(small-phone) {
+    &-career {
+      &--arrow {
+        svg {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &--designation {
+        font-size: $font-size-xl;
+        color: $white-color;
+      }
+    }
+  }
+}
+
+.author-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  color: $white-color;
+
+  &--inner {
+    width: 200%;
+    display: flex;
+    align-items: center;
+
+    animation: marquee 14s linear infinite;
+
+    .name {
+      font-size: calc($font-size-5xl * 3);
+      margin: 0 1rem;
+      font-weight: 600;
+    }
+
+    .spacer {
+      font-size: calc($font-size-5xl * 5);
+      margin: 0 1rem;
+      color: $white-color;
+      font-weight: 600;
+    }
+  }
+
+  @include respond(tab-port) {
+    @include author-container;
+  }
+
+  @include respond(phone) {
+    @include author-container;
+  }
+
+  @include respond(small-phone) {
+    & {
+      transform: translateY(60vh);
+    }
+  }
+}

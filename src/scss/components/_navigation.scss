@@ -1,0 +1,156 @@
+/**
+ * Styles
+ * https://dennissnellenberg.com/
+ */
+
+.navigation-container {
+
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: $navigation-padding;
+    font-size: $font-size-lg;
+
+    z-index: 2;
+
+    @include respond(phone) {
+        padding: $navigation-padding 0;
+    }
+}
+
+.navigation-title {
+
+    display: flex;
+    align-items: center;
+
+    font-weight: normal;
+    color: $dark-grey-color;
+    cursor: pointer;
+    letter-spacing: $letter-spacing-sm;
+
+    &--author {
+        display: flex;
+        width: 100%;
+        padding: $navigation-padding-items;
+
+        &--code {
+            display: inline-block;
+            transform: translateX(0rem);
+            transition: transform 0.5s ease;
+
+            &--active {
+                transform: translateX(-5rem);
+            }
+        }
+
+        &--container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        &--firstname {
+            display: inline-block;
+            transform: translateX(0.1rem);
+            transition: transform 0.5s ease;
+
+            &--active {
+                transform: translateX(-5rem);
+            }
+        }
+
+        &--lastname {
+            display: inline-block;
+            transform: translateX(0.3rem);
+            transition: transform 0.5s ease;
+
+            position: absolute;
+            top: 0;
+            overflow:hidden; 
+
+            &--active {
+                transform: translateX(-4.7rem);
+            }
+        }
+    }
+
+    &--copyright {
+        position: relative;
+        display: inline-block;
+        width: $word-width;
+        margin-right: 2px;
+        
+        &--active {
+            animation: rotate-clockwise 0.5s ease-in-out;
+        }
+
+        &--unactive {
+            animation: rotate-anti-clockwise 0.5s ease-in-out;
+        }
+    }
+
+    &--white {
+        color: $white-color;
+    }
+}
+
+.navigation-links {
+
+    padding: $navigation-link-width;
+
+    &--menuinner {
+        display: flex;
+        align-items: center;
+    }
+
+    &--link {
+        padding: $navigation-padding-items;
+        color: $dark-grey-color;
+        text-decoration: none;
+        margin: 0 5px;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        transition: all ease;
+
+        &--white {
+            color: $white-color;
+        }
+
+        &--menu {
+            cursor: pointer;
+            margin-left: -0.5rem;
+            margin-top: -0.2rem;
+
+            &--dot {
+                color: $white-color;
+                display: inline-block;
+                transform: scale(2.0);
+                margin-top: -0.25rem;
+            }
+        }
+
+        &--dot {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            
+            &--1 {
+                transform: scale(2.5);
+            }
+
+            &--2 {
+                transform: scale(2.5);
+            }
+
+            &--3 {
+                transform: scale(2.5);
+            }   
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.social {
+    @include footer-item;
+    display:inline-block; 
+    margin-right: $spacing-xs;
+
+    &:after {
+        display:block;
+        content: '';
+        border-bottom: solid 1px $white-color;
+        transform: scaleX(0);  
+        transition: transform 250ms ease-in-out;
+    }
+
+    &:hover:after { 
+        transform: scaleX(1);
+    }
+}

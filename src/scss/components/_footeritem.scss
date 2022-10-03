@@ -1,0 +1,23 @@
+.footer-item-container {
+
+    margin-right: $spacing-md;
+
+    p {
+        margin: $spacing-xs 0;
+        text-transform: uppercase;
+    }
+
+    @include respond(phone) {
+        margin-right: 0;
+    }
+}
+
+.footer-item-title {
+    @include footer-item;
+    font-size: $font-size-xs;
+    color: $grey-color;
+}
+
+.footer-item-paragraph {
+    @include footer-item;
+}

@@ -1,0 +1,46 @@
+.btn-container {
+  padding: 1rem;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 5rem;
+}
+
+.btn-fill {
+  display: block;
+  background-color: $blue-color;
+  width: 210px;
+  position: absolute;
+  height: 200%;
+  border-radius: 50%;
+  top: -50%;
+  will-change: transform;
+  // transition: background-color ease-in-out 5.25s;
+  transition: transform ease-in-out 0.4s;
+  transform: translate(0px, 76%);
+  // transform: translate(0px, 0%);
+  z-index: 1;
+}
+
+.btn-text {
+  display: inline-block;
+  border: 1px solid $mid-grey-color;
+  padding: calc($spacing-xs + $spacing-xs) calc($spacing-sm + $spacing-md);
+  border-radius: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+
+  color: $white-color;
+  transition: border-color ease-in-out 0.5s;
+
+  &--tel {
+    text-decoration: none;
+    color: $white-color;
+  }
+}

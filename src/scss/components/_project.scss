@@ -1,0 +1,61 @@
+.project-container {
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 1rem;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $grey-color;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    top: 3rem;
+  }
+}
+
+.project-image-wrapper {
+  .project-image {
+    width: 25vw;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}
+
+.project-content {
+  width: 40%;
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 1rem 0 2rem;
+  }
+
+  .project-heading {
+    color: $blue-color;
+    font-size: $font-size-3xl;
+    padding: $spacing-xs 0;
+
+    @include respond(phone) {
+      font-size: $font-size-2xl;
+    }
+  }
+
+  .project-description {
+    color: $mid-grey-color;
+
+    @include respond(phone) {
+      font-size: $font-size-md;
+    }
+  }
+
+  .project-cta {
+    position: relative;
+    top: 0.5rem;
+    text-decoration: none;
+    color: $dark-blue-color;
+    font-weight: 600;
+  }
+}

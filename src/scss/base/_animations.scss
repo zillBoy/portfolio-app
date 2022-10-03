@@ -1,0 +1,39 @@
+// Rotate 360 deg
+
+@keyframes rotate-clockwise {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-anti-clockwise {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate3d($move-initial, 0, 0);        
+    }
+
+    100% {
+        transform: translate3d($move-final, 0, 0);
+    }
+}
+
+@keyframes marquee-mobile {
+    0% {
+        transform: translate3d($mobile-move-initial, 0, 0);        
+    }
+
+    100% {
+        transform: translate3d($mobile-move-final, 0, 0);
+    }
+}
