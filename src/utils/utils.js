@@ -20,46 +20,77 @@ export const formatAMPM = (date) => {
   return strTime;
 };
 
+export const Sleep = (ms = 100) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
+
+
 // Work projects
 export const projects = [
   {
     id: 1,
-    image: "project1",
-    title: "Motive",
-    description:
-      "Motive (formerly KeepTruckin) unlocks the potential of the physical economy",
-    url: "https://gomotive.com/",
+    image: "monstyr-website",
+    title: "Monstyr Website",
+    alt: "monstyr-website",
+    description: 'Your ultimate lifestyle-enhancing app for the freshest, hottest deals and experiences. Discover online promos, in-store bargains, dining deals, and more. Customizable and location-based for your convenience!',
+    url: "https://www.monstyr.com/",
   },
   {
     id: 2,
-    image: "project2",
-    title: "Artist Events",
-    description:
-      "Artist Events allows you to browse a curated selection of artist events from around the world.",
-    url: "https://artistevents.netlify.app/",
+    image: "monstyr-mobile-app",
+    title: 'Monstyr Mobile-App',
+    alt: "monstyr-mobile",
+    description: "Discover Monstyr's mobile app for Android & iOS! Unleash the power of convenience in your pocket. Explore diverse deals, stay updated with local promotions, and customize your experience effortlessly.",
+    url: "https://play.google.com/store/apps/details?id=com.monstyr",
   },
   {
     id: 3,
-    image: "project3",
-    title: "Book Store",
+    image: "motive",
+    title: "Motive formerly KeepTruckin",
+    alt: 'gomotive',
     description:
-      "Book Store is a portfolio website, which allows you to browser through a list of books.",
-    url: "https://book-store-fe.netlify.app/",
+      "Your fleet's game-changer. Trusted by 120,000+ businesses for safety, productivity, and profitability. Experience AI-powered dashcams, ELD compliance, real-time tracking, and smart spend management. A brand that delivers excellence.",
+    url: "https://gomotive.com/",
   },
   {
     id: 4,
-    image: "project4",
-    title: "Saving & Investments",
+    image: "artist-events",
+    title: "Artist Events",
+    alt: 'artist-events',
+    description:
+      "Discover global artist events at Artist Events. Unite through music, as it connects people worldwide. Join top events like Taylor Swift, Maroon 5 and more!",
+    url: "https://artistevents.netlify.app/",
+  },
+  // {
+  //   id: 5,
+  //   image: "pokemon",
+  //   title: "Pokémon-App",
+  //   alt: "pokemon",
+  //   description: 'Make 3D Pokemon Card',
+  //   url: "https://www.google.com/",
+  // },
+  {
+    id: 6,
+    image: "investment",
+    title: 'Saving & Investments',
+    alt: "investment",
     description:
       "A Finncial Tool that helps you save your money all in one place, vester helps you achieve your financial dreams",
     url: "https://saving-and-investment.netlify.app/",
   },
-  {
-    id: 5,
-    image: "project5",
-    title: "Furniture E-store",
-    description:
-      "Furniture E-Store is a portfolio webiste, which gives users the experience of shopping e-commerce",
-    url: "https://furniture-e-store.web.app/",
-  },
+  // {
+  //   id: 3,
+  //   image: "project3",
+  //   title: "Book Store",
+  //   description:
+  //     "Book Store is a portfolio website, which allows you to browser through a list of books.",
+  //   url: "https://book-store-fe.netlify.app/",
+  // },
+  // {
+  //   id: 5,
+  //   image: "project5",
+  //   title: "Furniture E-store",
+  //   description:
+  //     "Furniture E-Store is a portfolio webiste, which gives users the experience of shopping e-commerce",
+  //   url: "https://furniture-e-store.web.app/",
+  // },
 ];
