@@ -1,12 +1,12 @@
-/**
- * Internal Dependencies
- * 
- */
+// Internal Dependencies
 import { formatAMPM } from "../utils/utils";
 import FooterItem from "./FooterItem";
 import Social from "./Social";
+import useTime from "../hooks/useTime";
 
 const Footer = () => {
+    const time = useTime();
+
     return (
         <footer className="footer-container">
             <div className="footer-main">
@@ -16,7 +16,7 @@ const Footer = () => {
                 />
                 <FooterItem 
                     title='Local Time'  
-                    paragraph={`${formatAMPM(new Date())} GMT`}
+                    paragraph={`${formatAMPM(time)} GMT+5`}
                 />
             </div>
 
@@ -39,7 +39,6 @@ const Footer = () => {
                         url="https://github.com/zillBoy"
                     />
                 </FooterItem>
-                
             </div>
         </footer>
     )
