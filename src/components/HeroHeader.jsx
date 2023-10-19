@@ -1,18 +1,16 @@
-/**
- * External Dependencies
- *
- */
-
-/**
- * Internal Dependencies
- *
- */
+// React Dependencies
 import { useState, useEffect } from "react";
+
+// External Dependencies
+import Marquee from 'react-fast-marquee'
+
+// Internal Dependencies
+import useWindowSize from "../hooks/useWindowSize";
+
 import heroImage from "../assets/images/hero-header-3.jpg";
 import mobileHeroImage from "../assets/images/mobile-hero-header-2.jpg";
 import { ReactComponent as ArrowDownRightSvg } from "../assets/images/arrow-down-right.svg";
 import { ReactComponent as GlobeSvg } from "../assets/images/globe.svg";
-import useWindowSize from "../hooks/useWindowSize";
 
 const HeroHeader = () => {
   // States
@@ -58,6 +56,7 @@ const HeroHeader = () => {
           </div>
         </section>
 
+        <Marquee speed={100}>
         <div className="author-container">
           <div className="author-container--inner">
             <h1 className="name">Muhammad</h1>
@@ -68,6 +67,7 @@ const HeroHeader = () => {
             <span className="spacer">&ndash;</span>
           </div>
         </div>
+        </Marquee>
       </div>
     </div>
   );

@@ -39,12 +39,3 @@ $svg-mobile-height: 2rem;
 
 // Text Scroll
 $text-scroll: 260rem;
-
-// Marquee
-$offset: 20vw;
-$move-initial: calc(-25% + $offset);
-$move-final: calc(-95% + $offset);
-
-$mobile-offset: 20vw;
-$mobile-move-initial: calc(-25% + $mobile-offset);
-$mobile-move-final: calc(-205% + $mobile-offset);
