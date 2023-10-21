@@ -51,7 +51,7 @@ const HeroHeader = () => {
             </div>
             <div className="personal-info-career--designation">
               <p>Software Engineer</p>
-              <p>Designer & Developer</p>
+              <p></p>
             </div>
           </div>
         </section>

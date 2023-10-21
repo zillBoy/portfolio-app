@@ -13,6 +13,10 @@
     flex-direction: column;
     top: 3rem;
   }
+  
+  @include respond(phone) {
+    width: 85%;
+  }
 }
 
 .project-image-wrapper {

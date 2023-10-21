@@ -64,6 +64,7 @@
 
 .hero-header-container {
   z-index: 1;
+  position: relative;
 }
 
 .hero-header-image-container {
@@ -223,5 +224,13 @@
     & {
       transform: translateY(60vh);
     }
+  }
+}
+
+
+// React-Fast-Marquee
+.rfm-marquee-container {
+  @include respond(phone) {
+    overflow-x: visible !important;
   }
 }
