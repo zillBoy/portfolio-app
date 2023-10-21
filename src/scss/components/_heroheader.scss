@@ -65,6 +65,7 @@
 .hero-header-container {
   z-index: 1;
   position: relative;
+  height: 100vh;
 }
 
 .hero-header-image-container {
@@ -187,50 +188,57 @@
 }
 
 .author-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 50vh;
+  display: flex;
+  align-items: center;
   color: $white-color;
 
-  &--inner {
-    width: 200%;
-    display: flex;
-    align-items: center;
+  .name {
+    font-size: calc($font-size-5xl * 3);
+    margin: 0 1rem;
+    font-weight: 600;
+  }
 
-    .name {
-      font-size: calc($font-size-5xl * 3);
-      margin: 0 1rem;
-      font-weight: 600;
-    }
-
-    .spacer {
-      font-size: calc($font-size-5xl * 5);
-      margin: 0 1rem;
-      color: $white-color;
-      font-weight: 600;
-    }
+  .spacer {
+    font-size: calc($font-size-5xl * 5);
+    margin: 0 1rem;
+    color: $white-color;
+    font-weight: 600;
   }
 
   @include respond(tab-port) {
-    @include author-container;
+    .name {
+      font-size: calc($font-size-5xl * 2);
+    }
+
+    .spacer {
+      font-size: calc($font-size-5xl * 4);
+    }
   }
 
   @include respond(phone) {
-    @include author-container;
+    .name {
+      font-size: calc($font-size-4xl * 2);
+    }
+
+    .spacer {
+      font-size: calc($font-size-4xl * 4);
+    }
   }
 
   @include respond(small-phone) {
-    & {
-      transform: translateY(60vh);
+    .name {
+      font-size: calc($font-size-4xl * 1);
+    }
+
+    .spacer {
+      font-size: calc($font-size-4xl * 3);
     }
   }
 }
 
-
-// React-Fast-Marquee
 .rfm-marquee-container {
-  @include respond(phone) {
-    overflow-x: visible !important;
-  }
+  overflow: hidden !important;
+  position: absolute !important;
+  bottom: 0%;
+  top: 70%;
 }

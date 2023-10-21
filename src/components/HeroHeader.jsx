@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 // External Dependencies
-import Marquee from 'react-fast-marquee'
+import Marquee from "react-fast-marquee";
 
 // Internal Dependencies
 import useWindowSize from "../hooks/useWindowSize";
@@ -13,11 +13,9 @@ import { ReactComponent as ArrowDownRightSvg } from "../assets/images/arrow-down
 import { ReactComponent as GlobeSvg } from "../assets/images/globe.svg";
 
 const HeroHeader = () => {
-  // States
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Hooks
   const screenSize = useWindowSize();
+
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (screenSize.width <= 820) setIsMobile(true);
@@ -55,20 +53,19 @@ const HeroHeader = () => {
             </div>
           </div>
         </section>
-
-        <Marquee speed={100}>
-        <div className="author-container">
-          <div className="author-container--inner">
-            <h1 className="name">Muhammad</h1>
-            <h1 className="name">Usman</h1>
-            <span className="spacer">&ndash;</span>
-            <h1 className="name">Muhammad</h1>
-            <h1 className="name">Usman</h1>
-            <span className="spacer">&ndash;</span>
-          </div>
-        </div>
-        </Marquee>
       </div>
+
+      <Marquee speed={100}>
+        <div className="author-container">
+          <h1 className="name">Muhammad</h1>
+          <h1 className="name">Usman</h1>
+          <span className="spacer">&ndash;</span>
+
+          <h1 className="name">Muhammad</h1>
+          <h1 className="name">Usman</h1>
+          <span className="spacer">&ndash;</span>
+        </div>
+      </Marquee>
     </div>
   );
 };

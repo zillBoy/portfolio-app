@@ -10,16 +10,14 @@ const Work = () => {
     <div className="work-container">
       <h1 className="work-heading">Projects</h1>
       {projects.map((project) => (
-        <>
-          <Project
-            key={project.id}
-            image={project.image}
-            title={project.title}
-            alt={project.alt}
-            description={project.description}
-            cta={project.url}
-          />
-        </>
+        <Project
+          key={project.id}
+          image={project.image}
+          title={project.title}
+          alt={project.alt}
+          description={project.description}
+          cta={project.url}
+        />
       ))}
     </div>
   );
