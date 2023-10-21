@@ -1,7 +1,4 @@
-/**
- * Internal Components 
- * 
- */
+// Internal Components 
 import Navigation from "../components/Navigation";
 import HeroHeader from "../components/HeroHeader";
 import Work from "../components/Work";
