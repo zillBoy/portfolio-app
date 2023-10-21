@@ -240,5 +240,9 @@
   overflow: hidden !important;
   position: absolute !important;
   bottom: 0%;
-  top: 70%;
+  top: 60%;
+
+  @include respond(tab-port) {
+    top: 70%;
+  }
 }
