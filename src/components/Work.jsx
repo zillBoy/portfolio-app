@@ -17,6 +17,7 @@ const Work = () => {
           alt={project.alt}
           description={project.description}
           cta={project.url}
+          codeLink={project.codeLink}
         />
       ))}
     </div>

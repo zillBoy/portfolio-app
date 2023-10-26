@@ -13,7 +13,7 @@
     flex-direction: column;
     top: 3rem;
   }
-  
+
   @include respond(phone) {
     width: 85%;
   }
@@ -55,11 +55,17 @@
     }
   }
 
-  .project-cta {
+  .project-cta,
+  .code-cta {
     position: relative;
     top: 0.5rem;
     text-decoration: none;
     color: $dark-blue-color;
     font-weight: 600;
+  }
+
+  .code-cta {
+    margin-left: 16px;
+    color: $dark-grey-color;
   }
 }
