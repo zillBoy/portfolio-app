@@ -37,9 +37,9 @@ export const projects = [
   },
   {
     id: 1,
-    image: "monstyr-website",
-    title: "Monstyr Website",
-    alt: "monstyr-website",
+    image: "monstyr-webapp",
+    title: "Monstyr Web-app",
+    alt: "monstyr-webapp",
     description:
       "Your ultimate lifestyle-enhancing app for the freshest, hottest deals and experiences. Discover online promos, in-store bargains, dining deals, and more. Customizable and location-based for your convenience!",
     url: "https://www.monstyr.com/",
